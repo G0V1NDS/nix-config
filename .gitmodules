@@ -1,0 +1,3 @@
+[submodule "Dotfiles"]
+	path = Dotfiles
+	url = https://github.com/G0V1NDS/dotfiles-open.git
