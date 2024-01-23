@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: let
-  hostname = "guru-air";
+  hostname = "guru-m1p";
   user = "guru";
 in {
   # machine-specific config

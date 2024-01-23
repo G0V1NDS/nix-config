@@ -49,10 +49,10 @@
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
 
-    secrets = {
-      url = "git+ssh://git@github.com/G0V1NDS/nix-secrets.git"; # Change this!
-      flake = false;
-    };
+    # secrets = {
+    #   url = "git+ssh://git@github.com/G0V1NDS/nix-secrets.git"; # Change this!
+    #   flake = false;
+    # };
   };
 
   outputs = {
@@ -66,7 +66,7 @@
     zig,
     llama-cpp,
     # disko,
-    secrets
+    # secrets
   } @inputs: let
     supportedSystems = ["x86_64-linux" "x86_64-darwin" "aarch64-linux" "aarch64-darwin"];
     forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
@@ -94,7 +94,8 @@
     );
 
     darwinConfigurations = {
-      guru-air = darwin.lib.darwinSystem {
+      guru-m1p = darwin.lib.darwinSystem {
+        # nix build .#darwinConfigurations.guru-m1p # For first time
         # darwin-rebuild switch --flake .
         system = "aarch64-darwin";
         pkgs = legacyPackages.aarch64-darwin;
@@ -103,7 +104,7 @@
           agenix.darwinModules.default
           ./hosts/common
           ./hosts/darwin/common
-          ./hosts/darwin/guru-air
+          ./hosts/darwin/guru-m1p
           ./users/guru.nix
         ];
         specialArgs = inputs;
