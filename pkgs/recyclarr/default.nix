@@ -92,7 +92,7 @@ in
       homepage = "https://recyclarr.dev/";
       changelog = "https://github.com/recyclarr/recyclarr/releases/tag/v${version}";
       license = licenses.mit;
-      maintainers = with maintainers; [josephst];
+      maintainers = with maintainers; [guru];
       platforms = ["x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin"];
     };
   }

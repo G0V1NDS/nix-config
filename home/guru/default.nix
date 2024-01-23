@@ -24,11 +24,11 @@ in {
   ];
 
   home = {
-    username = "joseph";
+    username = "guru";
     homeDirectory =
       if pkgs.stdenv.isDarwin
-      then "/Users/joseph"
-      else "/home/joseph";
+      then "/Users/guru"
+      else "/home/guru";
     packages = with pkgs; [
       # custom packages
       recyclarr

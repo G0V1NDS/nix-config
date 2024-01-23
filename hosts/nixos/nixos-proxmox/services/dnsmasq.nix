@@ -5,9 +5,9 @@
 }: let
   fqdn = config.networking.fqdn;
   address = [
-    "/nixos.josephstahl.com/192.168.1.10"
-    "/nas.josephstahl.com/192.168.1.12"
-    "/proxmox.josephstahl.com/192.168.1.7"
+    "/nixos.G0V1NDS.com/192.168.1.10"
+    "/nas.G0V1NDS.com/192.168.1.12"
+    "/proxmox.G0V1NDS.com/192.168.1.7"
   ];
 in {
   services.dnsmasq = {
@@ -18,7 +18,7 @@ in {
       interface = "enp6s18";
       bind-interfaces = true;
       no-resolv = true; # use specific upstreams, as the /etc/resolv.conf file just points to systemd-resolved (which points back to dnsmasq...)
-      no-hosts = true; # ignore hosts file, which keeps telling other devices that nixos.josephstahl.com is at 127.0.0.2
+      no-hosts = true; # ignore hosts file, which keeps telling other devices that nixos.G0V1NDS.com is at 127.0.0.2
       cache-size = 500;
       server = [ "8.8.8.8" "1.1.1.1" "8.8.4.4" "1.0.0.1" "2606:4700:4700::1111" "2606:4700:4700::1001"];
       address = address;

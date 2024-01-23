@@ -18,7 +18,7 @@
       auto-optimise-store = true;
       cores = lib.mkDefault 0; # value of 0 = all available cores
       max-jobs = lib.mkDefault "auto";
-      trusted-users = ["root" "joseph" "@wheel" "@staff"];
+      trusted-users = ["root" "guru" "@wheel" "@staff"];
       allowed-users = ["*"];
       # enabling sandbox prevents .NET from accessing /usr/bin/codesign
       # and stops binary signing from working

@@ -9,7 +9,7 @@ in {
   security.acme = {
     acceptTerms = true;
     # TODO: hide email?
-    defaults.email = "josephst18+acme@outlook.com"; # can't be local DNS since nixos.josephstahl.com resolves to local IP on LAN
+    defaults.email = "connect.govinds+acme@gmail.com"; # can't be local DNS since nixos.G0V1NDS.com resolves to local IP on LAN
     defaults.dnsResolver = "1.1.1.1:53";
     certs."${fqdn}" = {
       domain = "*.${fqdn}";

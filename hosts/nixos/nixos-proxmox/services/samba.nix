@@ -43,11 +43,11 @@
         "read only" = "no";
         "guest ok" = "yes";
       };
-      joseph = {
-        path = "/mnt/exthdd/shares/joseph";
+      guru = {
+        path = "/mnt/exthdd/shares/guru";
         "read only" = "no";
-        "valid users" = "joseph";
-        "force user" = "joseph";
+        "valid users" = "guru";
+        "force user" = "guru";
         "force group" = "users";
       };
     };

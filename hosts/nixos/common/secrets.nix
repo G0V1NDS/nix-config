@@ -1,6 +1,6 @@
 { config, pkgs, agenix, secrets, ... }:
 
-let user = "joseph"; in
+let user = "guru"; in
 {
 
   age.identityPaths = [
@@ -10,7 +10,7 @@ let user = "joseph"; in
     "/etc/ssh/ssh_host_ed25519_key"
   ];
 
-  age.secrets.joseph.file = "${secrets}/users/joseph.age";
+  age.secrets.${user}.file = "${secrets}/users/${user}.age";
 
   ###########################
 

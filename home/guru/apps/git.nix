@@ -7,8 +7,8 @@
 in {
   programs.git = {
     enable = true;
-    userEmail = "1269177+josephst@users.noreply.github.com";
-    userName = "Joseph Stahl";
+    userEmail = "connect.govinds@gmail.com";
+    userName = "Govind Singh";
     signing.key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICxKQtKkR7jkse0KMDvVZvwvNwT0gUkQ7At7Mcs9GEop";
     signing.signByDefault = isDarwin; # only sign on macOS for now (simplicity)
     extraConfig =

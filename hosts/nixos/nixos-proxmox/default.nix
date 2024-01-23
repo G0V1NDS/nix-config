@@ -51,8 +51,8 @@
 
   networking = {
     hostName = "nixos"; # Define your hostname. (managed by cloud-init)
-    domain = "josephstahl.com";
-    # search = ["josephstahl.com" "taildbd4c.ts.net"];
+    domain = "G0V1NDS.com";
+    # search = ["G0V1NDS.com" "taildbd4c.ts.net"];
 
     # networkmanager - disabled, use systemd-networkd instead
     networkmanager.enable = false; # Easiest to use and most distros use this by default.

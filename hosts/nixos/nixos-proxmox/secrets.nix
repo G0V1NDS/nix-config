@@ -1,6 +1,6 @@
 { config, pkgs, agenix, secrets, ... }:
 
-let user = "joseph"; in
+let user = "guru"; in
 {
   # secrets specific to this device
   age.secrets.smb = {

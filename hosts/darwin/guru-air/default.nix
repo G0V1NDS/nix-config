@@ -3,8 +3,8 @@
   pkgs,
   ...
 }: let
-  hostname = "josephs-air";
-  user = "joseph";
+  hostname = "guru-air";
+  user = "guru";
 in {
   # machine-specific config
   imports = [
@@ -14,7 +14,7 @@ in {
   networking = {
     # need to escape the single quote here
     # https://stackoverflow.com/questions/1250079/how-to-escape-single-quotes-within-single-quoted-strings
-    computerName = "Joseph'\\''s MacBook Air";
+    computerName = "guru'\\''s MacBook Air";
     hostName = hostname;
     localHostName = hostname;
     search = ["lan"];

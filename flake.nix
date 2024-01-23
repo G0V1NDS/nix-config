@@ -5,7 +5,7 @@
     # package repos
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    # nixpkgs.url = "github:josephst/nixpkgs/whois-implicit-functions";
+    # nixpkgs.url = "github:G0V1NDS/nixpkgs/whois-implicit-functions";
     # nixpkgs-unstable.follows = "nixpkgs";
 
     # home-manager
@@ -50,7 +50,7 @@
     # };
 
     secrets = {
-      url = "git+ssh://git@github.com/josephst/nix-secrets.git"; # Change this!
+      url = "git+ssh://git@github.com/G0V1NDS/nix-secrets.git"; # Change this!
       flake = false;
     };
   };
@@ -94,7 +94,7 @@
     );
 
     darwinConfigurations = {
-      josephs-air = darwin.lib.darwinSystem {
+      guru-air = darwin.lib.darwinSystem {
         # darwin-rebuild switch --flake .
         system = "aarch64-darwin";
         pkgs = legacyPackages.aarch64-darwin;
@@ -103,8 +103,8 @@
           agenix.darwinModules.default
           ./hosts/common
           ./hosts/darwin/common
-          ./hosts/darwin/josephs-air
-          ./users/joseph.nix
+          ./hosts/darwin/guru-air
+          ./users/guru.nix
         ];
         specialArgs = inputs;
       };
@@ -121,7 +121,7 @@
             ./hosts/common # nixOS and Darwin
             ./hosts/nixos/common # nixOS-specific
             ./hosts/nixos/nixos-orbstack # host-specific
-            ./users/joseph.nix
+            ./users/guru.nix
             ./users/root.nix
           ]
           ++ (builtins.attrValues nixosModules);
@@ -139,7 +139,7 @@
             ./hosts/common # nixOS and Darwin
             ./hosts/nixos/common # nixOS-specific
             ./hosts/nixos/nixos-proxmox # host-specific
-            ./users/joseph.nix
+            ./users/guru.nix
             ./users/root.nix
           ]
           ++ (builtins.attrValues nixosModules);
@@ -151,7 +151,7 @@
       nixos = {
         # override hostname with `nix run github:serokell/deploy-rs .#nixos -- --hostname 192.168.1.10`
         # (if DNS not yet set up/ working)
-        hostname = "nixos.josephstahl.com";
+        hostname = "nixos.G0V1NDS.com";
         profiles.system = {
           path = legacyPackages.x86_64-linux.deploy-rs.lib.activate.nixos self.nixosConfigurations.nixos;
           sshUser = "root";

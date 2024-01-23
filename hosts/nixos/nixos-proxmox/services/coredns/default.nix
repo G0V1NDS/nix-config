@@ -31,24 +31,24 @@ in {
         errors
       }
 
-      nixos.josephstahl.com {
+      nixos.G0V1NDS.com {
         bind 192.168.1.10
-        file ${./nixos.josephstahl.com.zone}
+        file ${./nixos.G0V1NDS.com.zone}
       }
 
-      nas.josephstahl.com {
+      nas.G0V1NDS.com {
         bind 192.168.1.10
         hosts {
-          192.168.1.12  nas.josephstahl.com
+          192.168.1.12  nas.G0V1NDS.com
           fallthrough
         }
         whoami
       }
 
-      proxmox.josephstahl.com {
+      proxmox.G0V1NDS.com {
         bind 192.168.1.10
         hosts {
-          192.168.1.7   proxmox.josephstahl.com
+          192.168.1.7   proxmox.G0V1NDS.com
           fallthrough
         }
         whoami

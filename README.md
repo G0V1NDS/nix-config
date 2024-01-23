@@ -1,6 +1,6 @@
 # Dotfiles w/ Nix and Home Manager
 
-🔔 [Read a blog post about this repository](https://josephstahl.com/nix-for-macos-and-a-homelab-server/)
+🔔 [Read a blog post about this repository](https://G0V1NDS.com/nix-for-macos-and-a-homelab-server/)
 
 > This is my own dotfiles repo and is customized to my own preferences - 
 although I try to keep everything working properly, use any part of this repo
@@ -55,11 +55,11 @@ echo "add public and private keys to /mnt/home/${USERNAME}/.ssh/id_25519{,.pub}"
 # ROOT KEY
 mkdir -p /mnt/root/.ssh
 echo "copy public and private keys to /mnt/home/root/.ssh/id_25519{,.pub}"
-# when agenix runs, looks for keys in /home/joseph/.ssh
+# when agenix runs, looks for keys in /home/guru/.ssh
 ln -s /mnt/home/${USERNAME} /home/${USERNAME}
 
 # once shell loaded, clone the repo to /mnt/etc/nixos
-git clone git@github.com:josephst/nixfiles.git /mnt/etc/nixos
+git clone git@github.com:G0V1NDS/nixfiles.git /mnt/etc/nixos
 cd /mnt/etc/nixos
 
 # update flake
@@ -98,4 +98,4 @@ First time, access at [192.168.1.24:32400/web](192.168.1.24:32400/web) to get it
 before trying to access via reverse proxy.
 
 ### Sabnabd
-Edit `/var/lib/sabnzbd/sabnzbd.ini` to allow `sabnzbd.nixos.josephstahl.com` (under `host_whitelist`)
+Edit `/var/lib/sabnzbd/sabnzbd.ini` to allow `sabnzbd.nixos.G0V1NDS.com` (under `host_whitelist`)

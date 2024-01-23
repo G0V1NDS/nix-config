@@ -8,5 +8,5 @@ change/ invalidate these secrets.
 
 ## Reporting a Vulnerability
 
-Reach me at any of the contact methods on [josephstahl.com](https://josephstahl.com)
+Reach me at any of the contact methods on [G0V1NDS.com](https://G0V1NDS.com)
 and I'll try to reply within 3 days. 

@@ -11,7 +11,7 @@ with lib; {
   # sudoers
   security.sudo.extraRules = [
     {
-      users = ["joseph"];
+      users = ["guru"];
       commands = [
         {
           command = "ALL";

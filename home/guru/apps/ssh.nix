@@ -9,7 +9,7 @@
       {
         "nixos" = {
           hostname = "nixos";
-          user = "joseph";
+          user = "guru";
           forwardAgent = true;
         };
       }
